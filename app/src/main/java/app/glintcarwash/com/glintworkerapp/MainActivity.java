@@ -192,10 +192,11 @@ public class MainActivity extends BaseActivity {
                 // calling onPrepareOptionsMenu() to hide action bar icons
                 invalidateOptionsMenu();
             }
+
             @Override
             public void onDrawerSlide(View drawerView, float slideOffset) {
                 super.onDrawerSlide(drawerView, slideOffset);
-                View v=findViewById(R.id.container_body);
+                View v = findViewById(R.id.container_body);
                 v.setTranslationX(slideOffset * drawerView.getWidth());
                 toolbar.setTranslationX(slideOffset * drawerView.getWidth());
                 mDrawerLayout.bringChildToFront(drawerView);
@@ -244,11 +245,11 @@ public class MainActivity extends BaseActivity {
                 break;
             case 5:
                 //if (UserInfo.getUser() != null) {
-                fragment = new ReferralFragment();
+                fragment = new OrdersFragment();
                 // }
                 break;
             case 6:
-                fragment = new OrdersFragment();
+                fragment = new WalletFragment();
                 break;
             case 7:
                 //Cart

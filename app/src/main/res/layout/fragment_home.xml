@@ -2,24 +2,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/backgroumd"
     android:layout_height="match_parent"
-    android:background="@drawable/homebg"
     tools:context="app.glintcarwash.com.glintworkerapp.MainActivity">
 
-    <ImageView
-        android:id="@+id/imgCar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:src="@drawable/order_home" />
-
-    <ImageView
-        android:id="@+id/imgOrder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:src="@drawable/order_ic" />
+    <ListView
+        android:id="@+id/lstJobs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="15dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="15dip"
+        android:divider="@color/white"
+        android:dividerHeight="15dip"></ListView>
 </RelativeLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dip"
+        android:background="@drawable/workavaibility_bg">
+
+        <RelativeLayout
+            android:id="@+id/rltop"
+            android:layout_width="wrap_content"
+            android:layout_height="48dip"
+            android:background="#9B9AD7">
+
+            <TextView
+                android:id="@+id/txtJobTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="10dip"
+                android:text="Car was job 1"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:src="@drawable/nextarrow" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imgPic"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="28dip"
+            android:src="@drawable/profileplaceholder" />
+
+        <RelativeLayout
+            android:id="@+id/rlmiddel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rltop"
+            android:layout_marginTop="25dip"
+            android:padding="3dip">
+
+            <ImageView
+                android:id="@+id/imgDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/card" />
+
+            <TextView
+                android:id="@+id/datelabl"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imgDate"
+                android:padding="5dip"
+                android:text="Date" />
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/datelabl"
+                android:padding="5dip"
+                android:text="Feb 5, 2016" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlmiddel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlmiddel"
+            android:padding="3dip">
+
+            <ImageView
+                android:id="@+id/imgTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/card" />
+
+            <TextView
+                android:id="@+id/timelabl"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imgTime"
+                android:padding="5dip"
+                android:text="Date" />
+
+            <TextView
+                android:id="@+id/txtTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/timelabl"
+                android:padding="5dip"
+                android:text="9:30 AM" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlbottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlmiddel1"
+            android:padding="3dip">
+
+            <ImageView
+                android:id="@+id/imgLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/order_location" />
+
+            <TextView
+                android:id="@+id/locationlabl"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imgLocation"
+                android:padding="5dip"
+                android:text="Location" />
+
+            <TextView
+                android:id="@+id/txtAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/locationlabl"
+                android:padding="5dip"
+                android:text="201, Titanium City Center, Anand nagar Road , Prahlad nagar, Ahmmedabad" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="5dip"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnAccept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:background="#45A751"
+                android:padding="5dip"
+                android:text="Accept"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btnReject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:background="#CF5997"
+                android:padding="5dip"
+                android:text="Reject"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

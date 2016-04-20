@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#52BA5B">
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="15dip">
+
+        <!-- 2 columns -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dip">
+
+            <TextView
+                android:layout_weight="1"
+                android:text="Amount"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_weight="1"
+                android:text=" : "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/txtAmount"
+                android:layout_weight="1"
+                android:text="$20.00"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dip">
+
+            <TextView
+                android:layout_weight="1"
+                android:text="Date"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_weight="1"
+                android:text=" : "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_weight="1"
+                android:text="March 12, 2016"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF" />
+        </TableRow>
+        <!-- edittext span 2 column -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dip">
+
+            <TextView
+                android:text="Transaction Type"
+                android:textColor="#FFFFFF"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            <TextView
+                android:text=" : "
+                android:textColor="#FFFFFF"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            <TextView
+                android:id="@+id/txtTransactionType"
+                android:text="Credit"
+                android:textColor="#FFFFFF"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>
