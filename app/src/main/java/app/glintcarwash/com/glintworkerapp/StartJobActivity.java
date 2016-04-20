@@ -19,10 +19,12 @@ import android.os.ParcelFileDescriptor;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -35,7 +37,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 
-public class StartJobActivity extends Activity {
+import permission.auron.com.marshmallowpermissionhelper.ActivityManagePermission;
+import permission.auron.com.marshmallowpermissionhelper.PermissionResult;
+import permission.auron.com.marshmallowpermissionhelper.PermissionUtils;
+
+public class StartJobActivity extends ActivityManagePermission {
     RelativeLayout rlOne, rlTwo;
     ImageView img1, img2;
 
@@ -56,6 +62,7 @@ public class StartJobActivity extends Activity {
     private static final float MIN_DISTANCE_CHANGE_FOR_UPDATES = 0;
 
     boolean one_click=false;
+    Toolbar toolbar;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -65,9 +72,33 @@ public class StartJobActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start_job_activity);
-
+        setActionBar();
         rlOne = (RelativeLayout) findViewById(R.id.rlOne);
         rlTwo = (RelativeLayout) findViewById(R.id.rlTwo);
+
+        img1 = (ImageView) findViewById(R.id.img1);
+        img2 = (ImageView) findViewById(R.id.img2);
+
+        askPermissions(new String[]{PermissionUtils.Manifest_CAMERA, PermissionUtils.Manifest_WRITE_EXTERNAL_STORAGE ,PermissionUtils.Manifest_READ_EXTERNAL_STORAGE})
+                .setPermissionResult(new PermissionResult() {
+                    @Override
+                    public void permissionGranted() {
+                        //permission granted
+                        //replace with your action
+                        rlOne.setClickable(false);
+                        rlTwo.setClickable(false);
+                        Toast.makeText(getApplicationContext(),"Please accept permission.",Toast.LENGTH_LONG).show();
+                    }
+
+                    @Override
+                    public void permissionNotGranted() {
+                        //permission denied
+                        //replace with your action
+                        rlOne.setClickable(true);
+                        rlTwo.setClickable(true);
+                    }
+                })
+                .requestPermission(PermissionUtils.KEY_CAMERA);
 
         rlOne.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +121,32 @@ public class StartJobActivity extends Activity {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
 //        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
+
+    public void setActionBar() {
+//        RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.app_bar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+//        getSupportActionBar().setHomeAsUpIndicator(getResources().getDrawable(R.drawable.ic_action_list));
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        //tvtitle.setText(getResources().getString(R.string.home_title));
+        Drawable upArrow;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            upArrow = getResources().getDrawable(R.drawable.back, StartJobActivity.this.getTheme());
+        } else {
+            upArrow = getResources().getDrawable(R.drawable.back);
+        }
+
+//        final Drawable upArrow = getResources().getDrawable(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
+        //upArrow.setColorFilter(Color.parseColor("#33cc90"), PorterDuff.Mode.SRC_ATOP);
+        getSupportActionBar().setHomeAsUpIndicator(upArrow);
+    }
+
+
+
+
+
 
 
     public void showDialogForImage() {
@@ -270,11 +327,13 @@ public class StartJobActivity extends Activity {
             if (photo != null) {
                 Drawable dr = new BitmapDrawable(photo);
                 rlOne.setBackgroundDrawable(dr);
+                img1.setVisibility(View.GONE);
             }
         }else{
             if (photo != null) {
                 Drawable dr = new BitmapDrawable(photo);
                 rlTwo.setBackgroundDrawable(dr);
+                img2.setVisibility(View.GONE);
             }
         }
 

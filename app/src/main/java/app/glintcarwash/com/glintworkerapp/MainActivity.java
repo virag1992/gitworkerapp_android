@@ -241,7 +241,7 @@ public class MainActivity extends BaseActivity {
                 break;
             case 4:
 //                getSupportActionBar().hide();
-                fragment = new MyCarFragment();
+                fragment = new ScheduleFragment();
                 break;
             case 5:
                 //if (UserInfo.getUser() != null) {

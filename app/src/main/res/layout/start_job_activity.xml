@@ -5,77 +5,100 @@
     android:layout_height="match_parent"
     tools:context="app.glintcarwash.com.glintworkerapp.StartJobActivity">
 
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@color/actionbar_bg"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ToolBarStyle">
+
+        <TextView
+            android:id="@+id/tvtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="On Job"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/actionbar_font" />
+    </android.support.v7.widget.Toolbar>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
         android:orientation="vertical"
         android:padding="10dp">
 
         <TextView
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Car before wask."
-            android:id="@+id/textView3" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
             android:layout_marginTop="10dp"
-        android:orientation="horizontal">
+            android:orientation="horizontal">
 
-        <RelativeLayout
-            android:id="@+id/rlOne"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:background="@drawable/register_rectangle_new">
+            <RelativeLayout
+                android:id="@+id/rlOne"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/register_rectangle_new">
 
-            <ImageView
-                android:id="@+id/img1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:src="@drawable/camera_ic"/>
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/camera_ic" />
 
-        </RelativeLayout>
+            </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/rlTwo"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/register_rectangle_new">
-            <ImageView
-                android:id="@+id/img2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:src="@drawable/camera_ic"/>
+            <RelativeLayout
+                android:id="@+id/rlTwo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/register_rectangle_new">
 
-        </RelativeLayout>
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/camera_ic" />
 
-    </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
 
         <TextView
+            android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Add some description."
-            android:id="@+id/textView4" />
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="10dp"
+            android:padding="10dp"
             android:background="@drawable/register_rectangle_new">
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="left|top"
-                android:background="@android:color/transparent"/>
+                android:background="@android:color/transparent"
+                android:gravity="left|top" />
 
         </RelativeLayout>
     </LinearLayout>
@@ -83,11 +106,11 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#04003A"
-        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_alignParentBottom="true"
-        android:text="Begin job"/>
+        android:background="#04003A"
+        android:text="Begin job"
+        android:textColor="#ffffff" />
 
 </RelativeLayout>

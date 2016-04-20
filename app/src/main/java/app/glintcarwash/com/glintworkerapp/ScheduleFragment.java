@@ -1,6 +1,9 @@
 package app.glintcarwash.com.glintworkerapp;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,26 +16,39 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class ScheduleFragment extends Activity {
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+public class ScheduleFragment extends Fragment {
     Button btnAdd;
     ListView listView2;
+    TextView txtDate;
 
+    @Nullable
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.schedule_fragment);
-        btnAdd = (Button) findViewById(R.id.btnAdd);
-        listView2 = (ListView) findViewById(R.id.listView2);
-        ListViewCustomAdapter adapter = new ListViewCustomAdapter(ScheduleFragment.this);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.schedule_fragment,container,false);
+        btnAdd = (Button) v.findViewById(R.id.btnAdd);
+        listView2 = (ListView) v.findViewById(R.id.listView2);
+        ListViewCustomAdapter adapter = new ListViewCustomAdapter(getActivity());
         listView2.setAdapter(adapter);
+        txtDate = (TextView) v.findViewById(R.id.txtDate);
+        Calendar c = Calendar.getInstance();
+        SimpleDateFormat format = new SimpleDateFormat("MMM dd,yyyy");
+        String my_date = format.format(c.getTime());
+        txtDate.setText(my_date);
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                Intent start = new Intent(getActivity(),TimeDialog.class);
+                startActivity(start);
             }
         });
+        return v;
     }
+
+
 
     public class ListViewCustomAdapter extends BaseAdapter {
         public Activity context;

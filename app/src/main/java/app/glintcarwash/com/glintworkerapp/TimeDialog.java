@@ -33,13 +33,20 @@ public class TimeDialog extends Activity {
         edtStartTime = (EditText) findViewById(R.id.edtStartTime);
         btnCreate = (Button) findViewById(R.id.btnCreate);
 
+        btnCreate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         timePicker1 = (TimePicker) findViewById(R.id.timePicker1);
 
         edtStartTime.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if (v == timePicker1) {
+                if (v == edtStartTime) {
                     if (event.getAction() == MotionEvent.ACTION_UP) {
                         setCurrentTimeOnView();
                         addListenerOnButton();
@@ -53,7 +60,7 @@ public class TimeDialog extends Activity {
 
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if (v == timePicker1) {
+                if (v == edtEndTime) {
                     if (event.getAction() == MotionEvent.ACTION_UP) {
                         setCurrentTimeOnView();
                         addListenerOnButton2();

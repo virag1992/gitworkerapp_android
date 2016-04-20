@@ -14,7 +14,32 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="#AAAAAA"></RelativeLayout>
+            android:background="#AAAAAA">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/backarr"/>
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:textColor="#000000"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/nextarr"/>
+
+        </RelativeLayout>
 
         <Button
             android:id="@+id/btnAdd"
