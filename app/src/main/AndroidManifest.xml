@@ -69,11 +69,8 @@
             android:name=".AddCarActivity"
             android:configChanges="keyboard|keyboardHidden"
             android:label="@string/app_name" />
-<<<<<<< HEAD
         <activity android:name=".OrderActivity" />
         <activity android:name=".InboxFragment" />
-=======
->>>>>>> 2e46fff94896a8641117d90a1f1c1848ee55f58c
         <activity
             android:name=".ChatBubbleActivity"
             android:label="@string/app_name" />
