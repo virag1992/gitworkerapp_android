@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.glintcarwash.com.glintworkerapp.CardListActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="#F1F1F0">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/imgClose"
+            android:background="@color/actionbar_bg"
+            android:gravity="center"
+            android:text="Select Your Card"
+            android:textColor="#FFF"
+            android:textSize="18dip" />
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/cancle" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lstCards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnWithdraw"
+        android:layout_below="@+id/rlTop" />
+
+    <Button
+        android:id="@+id/btnWithdraw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dip"
+        android:background="@color/actionbar_bg"
+        android:text="Withdraw Money"
+        android:textColor="#FFFFFF"
+        android:textSize="16dip" />
+</RelativeLayout>

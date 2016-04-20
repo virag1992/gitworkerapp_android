@@ -45,4 +45,5 @@ dependencies {
     compile 'it.sephiroth.android.library.horizontallistview:hlistview:1.2.2'
     compile 'com.github.cooltechworks:CreditCardView:v1.0'
 
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
 }

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@color/actionbar_bg"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ToolBarStyle">
+
+        <TextView
+            android:id="@+id/tvtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Job Request"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/actionbar_font" />
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rltop"
+            android:layout_width="match_parent"
+            android:layout_height="96dip"
+            android:background="#9B9AD7">
+
+            <TextView
+                android:id="@+id/txtJobTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="10dip"
+                android:text="Hi,You have received a new job request from"
+                android:textColor="#FFFFFF"
+                android:textSize="16dip"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/imgPic"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="30dip"
+                android:src="@drawable/profileplaceholder" />
+
+            <TextView
+                android:id="@+id/txtUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dip"
+                android:layout_toRightOf="@+id/imgPic"
+                android:padding="10dip"
+                android:text="Hiren Patel"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rltop"
+            android:background="#EEEEEE"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dip">
+
+                <ImageView
+                    android:id="@+id/imgDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/card" />
+
+                <TextView
+                    android:id="@+id/datelabl"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgDate"
+                    android:padding="5dip"
+                    android:text="Date" />
+
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/datelabl"
+                    android:padding="5dip"
+                    android:text=" : Feb 5, 2016" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dip">
+
+                <ImageView
+                    android:id="@+id/imgTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/card" />
+
+                <TextView
+                    android:id="@+id/timelabl"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgTime"
+                    android:padding="5dip"
+                    android:text="Time" />
+
+                <TextView
+                    android:id="@+id/txtTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/timelabl"
+                    android:padding="5dip"
+                    android:text=" : 9:30 AM" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dip">
+
+                <ImageView
+                    android:id="@+id/imgLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/order_location" />
+
+                <TextView
+                    android:id="@+id/locationlabl"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgLocation"
+                    android:padding="5dip"
+                    android:text="Location" />
+
+                <TextView
+                    android:id="@+id/txtAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/locationlabl"
+                    android:padding="5dip"
+                    android:text=" : 201, Titanium City Center, Anand nagar Road , Prahlad nagar, Ahmmedabad" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dip">
+
+                <ImageView
+                    android:id="@+id/imgCarName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/order_location" />
+
+                <TextView
+                    android:id="@+id/carlabl"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgCarName"
+                    android:padding="5dip"
+                    android:text="Car Name" />
+
+                <TextView
+                    android:id="@+id/txtCarName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/carlabl"
+                    android:padding="5dip"
+                    android:text=" : Audi" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dip">
+
+                <ImageView
+                    android:id="@+id/imgCarNumner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/order_location" />
+
+                <TextView
+                    android:id="@+id/carNumnerlabl"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgCarNumner"
+                    android:padding="5dip"
+                    android:text="Car Number" />
+
+                <TextView
+                    android:id="@+id/txtCarNumner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/carNumnerlabl"
+                    android:padding="5dip"
+                    android:text=" : GJ0126700" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dip">
+
+                <ImageView
+                    android:id="@+id/imgCarColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/order_location" />
+
+                <TextView
+                    android:id="@+id/carColorlabl"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgCarColor"
+                    android:padding="5dip"
+                    android:text="Car Detail" />
+
+                <TextView
+                    android:id="@+id/txtCarColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/carColorlabl"
+                    android:padding="5dip"
+                    android:text=" : Black Car" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dip">
+
+                <ImageView
+                    android:id="@+id/imgCarParking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/order_location" />
+
+                <TextView
+                    android:id="@+id/carParkinglabl"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgCarParking"
+                    android:padding="5dip"
+                    android:text="Parking Type" />
+
+                <TextView
+                    android:id="@+id/txtCarParking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/carParkinglabl"
+                    android:padding="5dip"
+                    android:text=" : Black Car" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dip"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnAccept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:background="#45A751"
+                android:padding="5dip"
+                android:text="Accept"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btnReject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:background="#CF5997"
+                android:padding="5dip"
+                android:text="Reject"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

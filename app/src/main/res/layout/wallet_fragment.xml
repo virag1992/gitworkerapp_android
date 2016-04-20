@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroumd"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:background="#B0DFFF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/btnWithdraw"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/lbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="5dip"
+                android:text="Wallet Balance"
+                android:textSize="18dip" />
+
+            <TextView
+                android:id="@+id/txtWalletBal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl"
+                android:layout_centerHorizontal="true"
+                android:padding="5dip"
+                android:text="$800.00"
+                android:textSize="20dip"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnWithdraw"
+            android:layout_width="150dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dip"
+            android:background="@color/actionbar_bg"
+            android:padding="10dip"
+            android:text="Withdraw Money"
+            android:textColor="#FFFFFF"
+            android:textSize="16dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2"
+        android:background="#FFFFFF">
+
+        <ListView
+            android:id="@+id/lstCards"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#52BA5B"
+            android:divider="#FFFFFF"
+            android:dividerHeight="2dip">
+
+        </ListView>
+    </RelativeLayout>
+</LinearLayout>
