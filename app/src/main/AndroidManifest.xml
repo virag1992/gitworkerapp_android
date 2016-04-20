@@ -10,6 +10,23 @@
     <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_SOCIAL_STREAM" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.ACCESS_ALL_DOWNLOADS" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,7 +34,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="app.glintcarwash.com.glintworkerapp.SplashActivity"
+            android:name=".SplashActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -27,58 +44,68 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="app.glintcarwash.com.glintworkerapp.LoginActivity"
+            android:name=".LoginActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="app.glintcarwash.com.glintworkerapp.ForgotPasswordActvity"
+            android:name=".ForgotPasswordActvity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="app.glintcarwash.com.glintworkerapp.VerifyActivity"
+            android:name=".VerifyActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="app.glintcarwash.com.glintworkerapp.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
-        <activity android:name="app.glintcarwash.com.glintworkerapp.ColorPickerActivity" />
-        <activity android:name="app.glintcarwash.com.glintworkerapp.CreditCardActivity" />
+        <activity android:name=".ColorPickerActivity" />
+        <activity android:name=".CreditCardActivity" />
         <activity
-            android:name="app.glintcarwash.com.glintworkerapp.CardEditActivity"
+            android:name=".CardEditActivity"
             android:configChanges="keyboard|keyboardHidden"
             android:label="@string/app_name" />
         <activity
-            android:name="app.glintcarwash.com.glintworkerapp.AddCarActivity"
+            android:name=".AddCarActivity"
             android:configChanges="keyboard|keyboardHidden"
             android:label="@string/app_name" />
         <activity android:name=".OrderActivity" />
-        <activity android:name="app.glintcarwash.com.glintworkerapp.InboxFragment" />
+        <activity android:name=".InboxFragment" />
         <activity
-            android:name="app.glintcarwash.com.glintworkerapp.ChatBubbleActivity"
+            android:name=".ChatBubbleActivity"
             android:label="@string/app_name" />
         <activity
-            android:name="app.glintcarwash.com.glintworkerapp.PlaceImageDialoug"
+            android:name=".PlaceImageDialoug"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent" />
-        <activity android:name="app.glintcarwash.com.glintworkerapp.CardListActivity" />
+        <activity android:name=".CardListActivity" />
         <activity
-            android:name="app.glintcarwash.com.glintworkerapp.BookOrderActivity"
+            android:name=".BookOrderActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="app.glintcarwash.com.glintworkerapp.WorkerAvaibilityActivity"
+            android:name=".WorkerAvaibilityActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="app.glintcarwash.com.glintworkerapp.OrderDetailActivity"
+            android:name=".OrderDetailActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="app.glintcarwash.com.glintworkerapp.PendigOrderActivity"
+            android:name=".PendigOrderActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
-        <activity android:name=".NotificationActivity"></activity>
+        <activity android:name=".NotificationActivity" />
+        <activity android:name=".ScheduleFragment" />
+        <activity
+            android:name=".TimeDialog"
+            android:theme="@android:style/Theme.Holo.Dialog.NoActionBar" />
+        <activity android:name=".StartJobActivity"></activity>
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

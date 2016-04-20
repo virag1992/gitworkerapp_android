@@ -39,5 +39,6 @@
     <string name="previous">PREVIOUS</string>
     <string name="done">DONE</string>
     <string name="card_holder_name_sample">JOHN MATTHEW</string>
+    <string name="title_activity_start_job">StartJobActivity</string>
 
 </resources>

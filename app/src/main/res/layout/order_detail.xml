@@ -34,6 +34,7 @@
         android:background="@drawable/contact_us_bg">
 
         <RelativeLayout
+            android:id="@+id/rlTop"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -196,7 +197,7 @@
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/imgjob"
                     android:padding="5dip"
-                    android:text="Job done by" />
+                    android:text="Car Owner" />
 
                 <ImageView
                     android:id="@+id/imgjobdoneby"
@@ -236,19 +237,35 @@
                     android:layout_toRightOf="@+id/imgRating"
                     android:padding="5dip"
                     android:text="Ratings" />
+
                 <RatingBar
                     android:id="@+id/rbrate"
                     style="?android:attr/ratingBarStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="right|center"
                     android:layout_centerVertical="true"
+                    android:layout_gravity="right|center"
                     android:layout_toRightOf="@+id/ratinglbl"
-                    android:progressTint="#EAEC31"
                     android:gravity="center"
                     android:numStars="5"
+                    android:progressTint="#EAEC31"
                     android:rating="3" />
             </RelativeLayout>
+
+
+            <!--===================================================-->
+
+            <Button
+                android:id="@+id/StartOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlRating"
+                android:layout_marginTop="10dp"
+                android:background="@color/blue_color_gradient"
+                android:text="Start Work" />
+
         </RelativeLayout>
+
+
     </ScrollView>
 </RelativeLayout>

@@ -1,10 +1,10 @@
 <resources>>
 
     <!--<style name="AppTheme.NoActionBar">-->
-        <!--<item name="windowActionBar">false</item>-->
-        <!--<item name="windowNoTitle">true</item>-->
-        <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
-        <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
+    <!--<item name="windowActionBar">false</item>-->
+    <!--<item name="windowNoTitle">true</item>-->
+    <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
+    <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
     <!--</style>-->
     <style name="AppTheme" parent="AppTheme.Base">
         <!-- Customize your theme here. -->
@@ -25,6 +25,8 @@
 
     <style name="ActionbarWidget" parent="android:Theme.Holo.Light">
         <item name="android:popupMenuStyle">@android:style/Widget.Holo.Light.PopupMenu</item>
-        <item name="android:dropDownListViewStyle">@android:style/Widget.Holo.Light.ListView.DropDown</item>
+        <item name="android:dropDownListViewStyle">
+            @android:style/Widget.Holo.Light.ListView.DropDown
+        </item>
     </style>
 </resources>
