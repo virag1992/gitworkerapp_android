@@ -56,6 +56,7 @@ public class CreditCardActivity extends BaseActivity {
         } else {
             upArrow = getResources().getDrawable(R.drawable.back);
         }
+        //a
 
 //        final Drawable upArrow = getResources().getDrawable(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
         //upArrow.setColorFilter(Color.parseColor("#33cc90"), PorterDuff.Mode.SRC_ATOP);
