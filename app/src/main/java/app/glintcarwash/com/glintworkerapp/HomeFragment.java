@@ -198,10 +198,10 @@ public class HomeFragment extends Fragment {
 
             convertView.setTag(viewHolder);
             final OrderInfo obj = getItem(position);
-            viewHolder.txtOrderTitle.setText(obj.OrderTitle);
-            viewHolder.txtTime.setText(obj.OrderStatus);
-            viewHolder.txtDate.setText(obj.OrderDate);
-            viewHolder.txtLocation.setText(obj.OrderAddress);
+//            viewHolder.txtOrderTitle.setText(obj.OrderTitle);
+//            viewHolder.txtTime.setText(obj.OrderStatus);
+//            viewHolder.txtDate.setText(obj.OrderDate);
+//            viewHolder.txtLocation.setText(obj.OrderAddress);
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

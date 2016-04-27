@@ -85,7 +85,7 @@ public class WalletFragment extends Fragment {
         btnWithdraw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                showCardList();
             }
         });
     }
@@ -96,7 +96,7 @@ public class WalletFragment extends Fragment {
         DialogForCard.getWindow().setBackgroundDrawable(
                 new ColorDrawable(Color.TRANSPARENT));
         DialogForCard.getWindow().setLayout(
-                ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.MATCH_PARENT);
+                ActionBar.LayoutParams.MATCH_PARENT, 600);
         View v1 = getActivity().getLayoutInflater().inflate(R.layout.card_list_dialog,
                 null);
         ListView lstCards = (ListView) v1.findViewById(R.id.lstCards);

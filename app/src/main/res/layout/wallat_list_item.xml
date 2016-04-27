@@ -19,20 +19,17 @@
             <TextView
                 android:layout_weight="1"
                 android:text="Amount"
-                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#FFFFFF" />
 
             <TextView
                 android:layout_weight="1"
                 android:text=" : "
-                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/txtAmount"
                 android:layout_weight="1"
                 android:text="$20.00"
-                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#FFFFFF" />
         </TableRow>
 
@@ -44,20 +41,17 @@
             <TextView
                 android:layout_weight="1"
                 android:text="Date"
-                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#FFFFFF" />
 
             <TextView
                 android:layout_weight="1"
                 android:text=" : "
-                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/txtDate"
                 android:layout_weight="1"
                 android:text="March 12, 2016"
-                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#FFFFFF" />
         </TableRow>
         <!-- edittext span 2 column -->
@@ -67,21 +61,20 @@
             android:padding="5dip">
 
             <TextView
+                android:layout_weight="1"
                 android:text="Transaction Type"
-                android:textColor="#FFFFFF"
-                android:layout_weight="1"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:textColor="#FFFFFF" />
+
             <TextView
-                android:text=" : "
-                android:textColor="#FFFFFF"
                 android:layout_weight="1"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:text=" : "
+                android:textColor="#FFFFFF" />
+
             <TextView
                 android:id="@+id/txtTransactionType"
-                android:text="Credit"
-                android:textColor="#FFFFFF"
                 android:layout_weight="1"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:text="Credit"
+                android:textColor="#FFFFFF" />
         </TableRow>
 
     </TableLayout>
