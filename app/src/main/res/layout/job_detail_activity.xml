@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
     <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/toolbar"
@@ -21,10 +22,11 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/actionbar_font" />
     </android.support.v7.widget.Toolbar>
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_below="@+id/toolbar"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
 
         <RelativeLayout
             android:id="@+id/rltop"
@@ -68,7 +70,38 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/rltop"
             android:background="#EEEEEE"
+            android:padding="10dp"
             android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dip">
+
+                <ImageView
+                    android:id="@+id/imgJobTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/card"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/data_tag"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgJobTitle"
+                    android:padding="5dip"
+                    android:text="Job Title" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/data_tag"
+                    android:padding="5dip"
+                    android:text=" : Mr Jams Parker" />
+            </RelativeLayout>
+
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -79,7 +112,8 @@
                     android:id="@+id/imgDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/card" />
+                    android:src="@drawable/card"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/datelabl"
@@ -107,7 +141,8 @@
                     android:id="@+id/imgTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/card" />
+                    android:src="@drawable/card"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/timelabl"
@@ -135,7 +170,8 @@
                     android:id="@+id/imgLocation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/order_location" />
+                    android:src="@drawable/order_location"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/locationlabl"
@@ -163,7 +199,8 @@
                     android:id="@+id/imgCarName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/order_location" />
+                    android:src="@drawable/order_location"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/carlabl"
@@ -191,7 +228,8 @@
                     android:id="@+id/imgCarNumner"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/order_location" />
+                    android:src="@drawable/order_location"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/carNumnerlabl"
@@ -213,7 +251,9 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="3dip">
+
+                android:padding="3dip"
+                android:visibility="gone">
 
                 <ImageView
                     android:id="@+id/imgCarColor"
@@ -247,6 +287,7 @@
                     android:id="@+id/imgCarParking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:visibility="gone"
                     android:src="@drawable/order_location" />
 
                 <TextView

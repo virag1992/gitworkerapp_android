@@ -46,8 +46,9 @@
                 android:src="@drawable/cancle" />
         </RelativeLayout>
 
+
         <RelativeLayout
-            android:id="@+id/rlmiddel"
+            android:id="@+id/rljob"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/rltop"
@@ -55,9 +56,41 @@
             android:padding="5dip">
 
             <ImageView
+                android:id="@+id/imgDateJoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/jpbprovider" />
+
+            <TextView
+                android:id="@+id/datelabl1"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imgDateJoin"
+                android:padding="5dip"
+                android:text="Job title." />
+
+            <TextView
+                android:id="@+id/txtDatejoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/datelabl1"
+                android:padding="5dip"
+                android:text="Mr P.Robert" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlmiddel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rljob"
+            android:padding="5dip">
+
+            <ImageView
                 android:id="@+id/imgDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
                 android:src="@drawable/card" />
 
             <TextView
@@ -88,6 +121,7 @@
                 android:id="@+id/imgLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
                 android:src="@drawable/order_location" />
 
             <TextView

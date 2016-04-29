@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +39,8 @@ public class WalletFragment extends Fragment {
     ArrayList<Integer> m_draw = new ArrayList<Integer>();
     Button btnWithdraw;
     int selectedcard = 5555;
+    int screen_width = 0;
+    int screen_height = 0;
 
     public static WalletFragment getInstance() {
         WalletFragment fragment = new WalletFragment();
@@ -91,12 +94,18 @@ public class WalletFragment extends Fragment {
     }
 
     public void showCardList() {
+        DisplayMetrics displaymetrics = new DisplayMetrics();
+        getActivity().getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+        screen_height = displaymetrics.heightPixels;
+        screen_width = displaymetrics.widthPixels;
+        screen_height=screen_height-100;
+        screen_width = screen_width-50;
         DialogForCard = new Dialog(getActivity());
         DialogForCard.requestWindowFeature(Window.FEATURE_NO_TITLE);
         DialogForCard.getWindow().setBackgroundDrawable(
                 new ColorDrawable(Color.TRANSPARENT));
         DialogForCard.getWindow().setLayout(
-                ActionBar.LayoutParams.MATCH_PARENT, 600);
+               screen_width, screen_height);
         View v1 = getActivity().getLayoutInflater().inflate(R.layout.card_list_dialog,
                 null);
         ListView lstCards = (ListView) v1.findViewById(R.id.lstCards);
@@ -122,6 +131,8 @@ public class WalletFragment extends Fragment {
         DialogForCard.setContentView(v1);
         DialogForCard.getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        DialogForCard.getWindow().setLayout(
+                screen_width, screen_height);
         DialogForCard.setCancelable(false);
         DialogForCard.show();
     }

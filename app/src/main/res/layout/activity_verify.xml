@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Verify"
+            android:text="Verify Your Account"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/actionbar_font" />
     </android.support.v7.widget.Toolbar>
@@ -80,6 +80,7 @@
         android:background="#01004C"
         android:padding="5dip"
         android:text="Verify"
+        android:textAllCaps="false"
         android:textColor="#FFFFFF" />
 
 </RelativeLayout>

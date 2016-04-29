@@ -95,8 +95,8 @@
 
                 <ImageView
                     android:id="@+id/imgDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:src="@drawable/order_date" />
 
                 <TextView
@@ -105,6 +105,7 @@
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/imgDate"
                     android:padding="5dip"
+                    android:textStyle="bold"
                     android:text="Date" />
 
                 <TextView
@@ -125,8 +126,8 @@
 
                 <ImageView
                     android:id="@+id/imgLocation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:src="@drawable/order_location" />
 
                 <TextView
@@ -135,7 +136,9 @@
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/imgLocation"
                     android:padding="5dip"
-                    android:text="Date" />
+                    android:textStyle="bold"
+
+                    android:text="Location" />
 
                 <TextView
                     android:id="@+id/txtAddress"
@@ -155,8 +158,8 @@
 
                 <ImageView
                     android:id="@+id/imgAmount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:src="@drawable/order_money" />
 
                 <TextView
@@ -165,6 +168,8 @@
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/imgAmount"
                     android:padding="5dip"
+                    android:textStyle="bold"
+
                     android:text="Amount" />
 
                 <TextView
@@ -185,8 +190,8 @@
 
                 <ImageView
                     android:id="@+id/imgjob"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:layout_centerVertical="true"
                     android:src="@drawable/order_jobdone" />
 
@@ -197,6 +202,8 @@
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/imgjob"
                     android:padding="5dip"
+                    android:textStyle="bold"
+
                     android:text="Car Owner" />
 
                 <ImageView
@@ -217,10 +224,147 @@
                     android:text="Hiren Patel" />
             </RelativeLayout>
 
+
+            <RelativeLayout
+                android:id="@+id/rlbottom3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlbottom2"
+                android:padding="2dip">
+
+                <ImageView
+                    android:id="@+id/imgAmount3"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/order_money" />
+
+                <TextView
+                    android:id="@+id/amountlabl3"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgAmount3"
+                    android:padding="5dip"
+                    android:textStyle="bold"
+
+                    android:text="Colour" />
+
+                <TextView
+                    android:id="@+id/txtAmount3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/amountlabl3"
+                    android:padding="5dip"
+                    android:text="" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlbottom4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlbottom3"
+                android:padding="2dip">
+
+                <ImageView
+                    android:id="@+id/imgAmount4"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/carnumber" />
+
+                <TextView
+                    android:id="@+id/amountlabl4"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgAmount4"
+                    android:padding="5dip"
+                    android:textStyle="bold"
+
+                    android:text="Car Number" />
+
+                <TextView
+                    android:id="@+id/txtAmount4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/amountlabl4"
+                    android:padding="5dip"
+                    android:text="GJ 14521" />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/rlbottom5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlbottom4"
+                android:padding="2dip">
+
+                <ImageView
+                    android:id="@+id/imgAmount5"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/cardetails" />
+
+                <TextView
+                    android:id="@+id/amountlabl5"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgAmount5"
+                    android:padding="5dip"
+                    android:textStyle="bold"
+
+                    android:text="Car Name" />
+
+                <TextView
+                    android:id="@+id/txtAmount5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/amountlabl5"
+                    android:padding="5dip"
+                    android:text="My BMW" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlbottom6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlbottom5"
+                android:padding="2dip">
+
+                <ImageView
+                    android:id="@+id/imgAmount6"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/parkingtype" />
+
+                <TextView
+                    android:id="@+id/amountlabl6"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgAmount6"
+                    android:padding="5dip"
+                    android:textStyle="bold"
+
+                    android:text="Parking Type" />
+
+                <TextView
+                    android:id="@+id/txtAmount6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/amountlabl6"
+                    android:padding="5dip"
+                    android:text="Private" />
+            </RelativeLayout>
+
+
+
+
             <RelativeLayout
                 android:id="@+id/rlRating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:layout_below="@+id/rlbottom2"
                 android:padding="2dip">
 
@@ -259,7 +403,7 @@
                 android:id="@+id/StartOrder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/rlRating"
+                android:layout_below="@+id/rlbottom6"
                 android:layout_marginTop="10dp"
                 android:background="@color/blue_color_gradient"
                 android:text="Start Work" />

@@ -37,9 +37,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 
+
 import permission.auron.com.marshmallowpermissionhelper.ActivityManagePermission;
 import permission.auron.com.marshmallowpermissionhelper.PermissionResult;
 import permission.auron.com.marshmallowpermissionhelper.PermissionUtils;
+
 
 public class StartJobActivity extends ActivityManagePermission {
     RelativeLayout rlOne, rlTwo;
@@ -78,6 +80,8 @@ public class StartJobActivity extends ActivityManagePermission {
 
         img1 = (ImageView) findViewById(R.id.img1);
         img2 = (ImageView) findViewById(R.id.img2);
+
+
 
         askPermissions(new String[]{PermissionUtils.Manifest_CAMERA, PermissionUtils.Manifest_WRITE_EXTERNAL_STORAGE ,PermissionUtils.Manifest_READ_EXTERNAL_STORAGE})
                 .setPermissionResult(new PermissionResult() {
