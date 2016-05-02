@@ -73,6 +73,7 @@ public class MainActivity extends BaseActivity {
         super.onWindowFocusChanged(hasFocus);
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        int screenDensity = metrics.densityDpi;
         int h = metrics.heightPixels;
         int w = metrics.widthPixels;
         ViewGroup.LayoutParams p = mDrawerList.getLayoutParams();
@@ -155,8 +156,8 @@ public class MainActivity extends BaseActivity {
                 .getResourceId(8, -1)));
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[9], navMenuIcons
                 .getResourceId(9, -1)));
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[10], navMenuIcons
-                .getResourceId(10, -1)));
+//        navDrawerItems.add(new NavDrawerItem(navMenuTitles[10], navMenuIcons
+//                .getResourceId(10, -1)));
 //        navDrawerItems.add(new NavDrawerItem(navMenuTitles[9], navMenuIcons
 //                .getResourceId(9, -1)));
 
@@ -269,13 +270,14 @@ public class MainActivity extends BaseActivity {
                 break;
             case 9:
 //                getSupportActionBar().hide();
-                fragment = new HelpFragment();
-                break;
-            case 10:
-//                getSupportActionBar().hide();
-//                fragment = new MyCarFragment();
+//                fragment = new HelpFragment();
                 finish();
                 break;
+//            case 10:
+////                getSupportActionBar().hide();
+////                fragment = new MyCarFragment();
+//                finish();
+//                break;
             default:
                 break;
         }

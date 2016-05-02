@@ -16,6 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Card one"
+            android:textStyle="bold"
             android:textColor="#000000"
             android:textSize="20dp" />
 
@@ -30,7 +31,7 @@
             android:id="@+id/imgEdit"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginRight="15dp"
             android:layout_toLeftOf="@+id/imgDel"
             android:src="@drawable/editcard" />
 
@@ -54,6 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
                 android:layout_alignParentBottom="true"
+                android:paddingLeft="20dip"
                 android:background="#ffffff">
 
                 <TextView
@@ -61,7 +63,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Card Number"
-                    android:textColor="#000000"
+                    android:textColor="#377F4B"
                     android:textSize="15dp" />
 
                 <TextView

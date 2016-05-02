@@ -34,7 +34,7 @@
                 android:layout_centerHorizontal="true"
                 android:padding="5dip"
                 android:text="$800.00"
-                android:textSize="20dip"
+                android:textSize="25dip"
                 android:textStyle="bold" />
         </RelativeLayout>
 
@@ -48,7 +48,7 @@
             android:padding="10dip"
             android:text="Withdraw Money"
             android:textColor="#FFFFFF"
-            android:textSize="16dip" />
+            android:textSize="20dip" />
     </RelativeLayout>
 
     <RelativeLayout

@@ -30,7 +30,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dip"
             android:layout_marginRight="10dip"
-            android:src="@drawable/cancle" />
+            android:src="@drawable/popupclose" />
     </RelativeLayout>
 
     <ListView

@@ -98,16 +98,23 @@ public class WalletFragment extends Fragment {
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
         screen_height = displaymetrics.heightPixels;
         screen_width = displaymetrics.widthPixels;
-        screen_height=screen_height-100;
-        screen_width = screen_width-50;
+        screen_height = screen_height - 300;
+        screen_width = screen_width - 50;
         DialogForCard = new Dialog(getActivity());
         DialogForCard.requestWindowFeature(Window.FEATURE_NO_TITLE);
         DialogForCard.getWindow().setBackgroundDrawable(
                 new ColorDrawable(Color.TRANSPARENT));
         DialogForCard.getWindow().setLayout(
-               screen_width, screen_height);
+                screen_width, screen_height);
         View v1 = getActivity().getLayoutInflater().inflate(R.layout.card_list_dialog,
                 null);
+        ImageView imgClose = (ImageView) v1.findViewById(R.id.imgClose);
+        imgClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogForCard.dismiss();
+            }
+        });
         ListView lstCards = (ListView) v1.findViewById(R.id.lstCards);
         ArrayList<OrderInfo> m_temp = new ArrayList<OrderInfo>();
         for (int i = 0; i < 4; i++) {

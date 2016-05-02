@@ -3,6 +3,7 @@ package global;
 /**
  * Created by Dharmesh on 9/3/2015.
  */
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Point;
@@ -11,7 +12,10 @@ import android.view.WindowManager;
 
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -25,7 +29,7 @@ public class Utils {
     }
 
 	/*
-	 * Reading file paths from SDCard
+     * Reading file paths from SDCard
 	 */
 
     @SuppressLint("NewApi")
@@ -50,7 +54,7 @@ public class Utils {
         final int buffer_size = 1024;
         try {
             byte[] bytes = new byte[buffer_size];
-            for (;;) {
+            for (; ; ) {
                 int count = is.read(bytes, 0, buffer_size);
                 if (count == -1)
                     break;
@@ -59,6 +63,7 @@ public class Utils {
         } catch (Exception ex) {
         }
     }
+
     @SuppressWarnings("unused")
     private boolean IsSupportedFile(String filePath) {
         String ext = filePath.substring((filePath.lastIndexOf(".") + 1),
@@ -73,4 +78,22 @@ public class Utils {
 
     }
 
+    public static boolean isSameDate(Date d1, Date d2) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String s = sdf.format(d1);
+        try {
+            d1 = sdf.parse(s);
+        } catch (ParseException e1) {
+            e1.printStackTrace();
+        }
+        s = sdf.format(d2);
+        try {
+            d2 = sdf.parse(s);
+        } catch (ParseException e1) {
+            e1.printStackTrace();
+        }
+        int days1 = (int) (d1.getTime() / 86400);
+        int days2 = (int) (d2.getTime() / 86400);
+        return days1 == days2;
+    }
 }

@@ -7,14 +7,14 @@
     <string-array name="nav_drawer_items">
         <item>Hiren</item>
         <item>Home</item>
-        <item>Profile</item>
-        <item>Notification</item>
+        <item>My Profile</item>
+        <item>Notifications</item>
         <item>My Schedule</item>
-        <item>My Order</item>
+        <item>My Orders</item>
         <item>Wallet</item>
         <item>Contact Us</item>
-        <item>Messages</item>
-        <item>Help</item>
+        <item>Inbox</item>
+        <!--<item>Help</item>-->
         <item>Logout</item>
     </string-array>
 
@@ -26,11 +26,11 @@
         <item>@drawable/menu_profile</item>
         <item>@drawable/menu_notification</item>
         <item>@drawable/menu_shape</item>
-        <item>@drawable/menu_referral</item>
         <item>@drawable/order</item>
+        <item>@drawable/menu_referral</item>
         <item>@drawable/menu_contactus</item>
         <item>@drawable/menu_messages</item>
-        <item>@drawable/menu_help</item>
+        <!--<item>@drawable/menu_help</item>-->
         <item>@drawable/menu_logout</item>
     </array>
 

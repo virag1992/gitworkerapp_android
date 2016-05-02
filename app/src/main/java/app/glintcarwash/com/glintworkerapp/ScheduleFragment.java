@@ -18,21 +18,29 @@ import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
+
+import global.Utils;
 
 public class ScheduleFragment extends Fragment {
     Button btnAdd;
     ListView listView2;
     TextView txtDate;
+    Date m_currentDate;
+    ImageView imgPrevious, imgNext;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.schedule_fragment,container,false);
+        View v = inflater.inflate(R.layout.schedule_fragment, container, false);
+        m_currentDate = new Date();
         btnAdd = (Button) v.findViewById(R.id.btnAdd);
         listView2 = (ListView) v.findViewById(R.id.listView2);
         ListViewCustomAdapter adapter = new ListViewCustomAdapter(getActivity());
         listView2.setAdapter(adapter);
         txtDate = (TextView) v.findViewById(R.id.txtDate);
+        imgNext = (ImageView) v.findViewById(R.id.imgNext);
+        imgPrevious = (ImageView) v.findViewById(R.id.imgPrevious);
         Calendar c = Calendar.getInstance();
         SimpleDateFormat format = new SimpleDateFormat("MMM dd,yyyy");
         String my_date = format.format(c.getTime());
@@ -41,13 +49,46 @@ public class ScheduleFragment extends Fragment {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent start = new Intent(getActivity(),TimeDialog.class);
+                Intent start = new Intent(getActivity(), TimeDialog.class);
                 startActivity(start);
+            }
+        });
+
+        imgNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NextDate();
+            }
+        });
+        imgPrevious.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PreviousDate();
             }
         });
         return v;
     }
 
+    public void NextDate() {
+        m_currentDate = new Date(
+                (m_currentDate.getTime() + (24 * 60 * 60 * 1000)));
+        SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy");
+        String date = sdf.format(m_currentDate);
+        String yourDate = sdf.format(m_currentDate);
+        txtDate.setText(yourDate);
+    }
+
+    public void PreviousDate() {
+        if (Utils.isSameDate(m_currentDate, new Date())) {
+            return;
+        }
+        m_currentDate = new Date(
+                (m_currentDate.getTime() - (24 * 60 * 60 * 1000)));
+        SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy");
+        String date = sdf.format(m_currentDate);
+        String yourDate = sdf.format(m_currentDate);
+        txtDate.setText(yourDate);
+    }
 
 
     public class ListViewCustomAdapter extends BaseAdapter {
@@ -84,7 +125,7 @@ public class ScheduleFragment extends Fragment {
 
         public class Holder {
             TextView title1;
-            ImageView imgDelete,imgEdit;
+            ImageView imgDelete, imgEdit;
             RelativeLayout rlMain;
         }
 

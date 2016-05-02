@@ -9,6 +9,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -20,7 +21,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
     TextView txtSigninLable, txtSigninDiv, txtSigupLable, txtSignupdiv,
             txtForgotPassword;
     Button btnSignin;
-
+LinearLayout llco;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +34,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
         rlsignupRadio = (RelativeLayout) findViewById(R.id.rlsignupbutton);
         rlSignInView = (RelativeLayout) findViewById(R.id.rlSIGNINVIEW);
         rlSignupview = (RelativeLayout) findViewById(R.id.rlSIGNUPVIEW);
-
+        llco = (LinearLayout) findViewById(R.id.llco);
         txtSigninLable = (TextView) findViewById(R.id.txtsignin);
         txtSigninDiv = (TextView) findViewById(R.id.div1);
         txtSigupLable = (TextView) findViewById(R.id.txtSignup);
@@ -54,6 +55,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
         if (v.equals(rlSigninRadioButton)) {
             rlSignInView.setVisibility(View.VISIBLE);
             rlSignupview.setVisibility(View.GONE);
+            llco.setVisibility(View.VISIBLE);
             txtSigninDiv.setBackgroundColor(Color.parseColor("#3CB4DA"));
             txtSigninLable.setTextColor(Color.parseColor("#3CB4DA"));
             txtSignupdiv.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -61,6 +63,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
             btnSignin.setText("SIGN IN");
         } else if (v.equals(rlsignupRadio)) {
             rlSignInView.setVisibility(View.GONE);
+            llco.setVisibility(View.GONE);
             rlSignupview.setVisibility(View.VISIBLE);
             txtSignupdiv.setBackgroundColor(Color.parseColor("#3CB4DA"));
             txtSigupLable.setTextColor(Color.parseColor("#3CB4DA"));
@@ -70,7 +73,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
         } else if (v.equals(btnSignin)) {
             if (btnSignin.getText().toString().equalsIgnoreCase("SIGN IN")) {
                 Intent i = new Intent(LoginActivity.this,
-                        VerifyActivity.class);
+                        MainActivity.class);
                 startActivity(i);
             } else {
                 Intent i = new Intent(LoginActivity.this,

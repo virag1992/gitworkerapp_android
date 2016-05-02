@@ -76,26 +76,40 @@
                     android:src="@drawable/cancle" />
             </RelativeLayout>
 
-            <ImageView
-                android:id="@+id/imgCardDetail"
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
                 android:layout_width="match_parent"
-                android:layout_height="200dip"
-                android:layout_below="@+id/rltop"
-                android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                android:src="@drawable/dummy_car" />
+                android:layout_height="200dp"
+                android:layout_below="@+id/rltop" />
+
+            <com.daimajia.slider.library.Indicators.PagerIndicator
+                android:id="@+id/custom_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/slider"
+                android:layout_centerHorizontal="true"
+                android:gravity="center" />
+            <!--<ImageView-->
+            <!--android:id="@+id/imgCardDetail"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="200dip"-->
+            <!--android:layout_below="@+id/rltop"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:src="@drawable/dummy_car" />-->
 
             <RelativeLayout
                 android:id="@+id/rlmiddel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/imgCardDetail"
+                android:layout_below="@+id/custom_indicator"
                 android:layout_marginTop="20dip"
                 android:padding="2dip">
 
                 <ImageView
                     android:id="@+id/imgDate"
                     android:layout_width="35dp"
+                    android:layout_centerVertical="true"
                     android:layout_height="35dp"
                     android:src="@drawable/order_date" />
 
@@ -105,14 +119,16 @@
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/imgDate"
                     android:padding="5dip"
-                    android:textStyle="bold"
-                    android:text="Date" />
+                    android:layout_centerVertical="true"
+                    android:text="Date"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txtDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/datelabl"
+                    android:layout_centerVertical="true"
                     android:padding="5dip"
                     android:text="Feb 5, 2016" />
             </RelativeLayout>
@@ -128,17 +144,19 @@
                     android:id="@+id/imgLocation"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
+                    android:layout_centerVertical="true"
                     android:src="@drawable/order_location" />
 
                 <TextView
                     android:id="@+id/locationlabl"
                     android:layout_width="100dip"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/imgLocation"
                     android:padding="5dip"
-                    android:textStyle="bold"
+                    android:text="Location"
 
-                    android:text="Location" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txtAddress"
@@ -160,22 +178,25 @@
                     android:id="@+id/imgAmount"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
+                    android:layout_centerVertical="true"
                     android:src="@drawable/order_money" />
 
                 <TextView
                     android:id="@+id/amountlabl"
                     android:layout_width="100dip"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/imgAmount"
                     android:padding="5dip"
-                    android:textStyle="bold"
+                    android:text="Amount"
 
-                    android:text="Amount" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txtAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/amountlabl"
                     android:padding="5dip"
                     android:text="$210.90" />
@@ -202,9 +223,9 @@
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/imgjob"
                     android:padding="5dip"
-                    android:textStyle="bold"
+                    android:text="Car Owner"
 
-                    android:text="Car Owner" />
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/imgjobdoneby"
@@ -236,25 +257,35 @@
                     android:id="@+id/imgAmount3"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/order_money" />
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/color_order" />
 
                 <TextView
                     android:id="@+id/amountlabl3"
                     android:layout_width="100dip"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/imgAmount3"
                     android:padding="5dip"
-                    android:textStyle="bold"
+                    android:text="Colour"
+                    android:textStyle="bold" />
 
-                    android:text="Colour" />
-
-                <TextView
-                    android:id="@+id/txtAmount3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
+                    android:id="@+id/img5"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
                     android:layout_toRightOf="@+id/amountlabl3"
-                    android:padding="5dip"
-                    android:text="" />
+                    android:background="@drawable/color_dot" />
+
+                <!--<TextView-->
+                <!--android:id="@+id/txtAmount3"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_toRightOf="@+id/amountlabl3"-->
+                <!--android:padding="5dip"-->
+                <!--android:text="" />-->
             </RelativeLayout>
 
 
@@ -268,6 +299,7 @@
                 <ImageView
                     android:id="@+id/imgAmount4"
                     android:layout_width="35dp"
+                    android:layout_centerVertical="true"
                     android:layout_height="35dp"
                     android:src="@drawable/carnumber" />
 
@@ -275,21 +307,22 @@
                     android:id="@+id/amountlabl4"
                     android:layout_width="100dip"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/imgAmount4"
                     android:padding="5dip"
-                    android:textStyle="bold"
+                    android:text="Car Number"
 
-                    android:text="Car Number" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txtAmount4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/amountlabl4"
                     android:padding="5dip"
                     android:text="GJ 14521" />
             </RelativeLayout>
-
 
 
             <RelativeLayout
@@ -303,6 +336,7 @@
                     android:id="@+id/imgAmount5"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
+                    android:layout_centerVertical="true"
                     android:src="@drawable/cardetails" />
 
                 <TextView
@@ -310,15 +344,17 @@
                     android:layout_width="100dip"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/imgAmount5"
+                    android:layout_centerVertical="true"
                     android:padding="5dip"
-                    android:textStyle="bold"
+                    android:text="Car Name"
 
-                    android:text="Car Name" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txtAmount5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/amountlabl5"
                     android:padding="5dip"
                     android:text="My BMW" />
@@ -336,42 +372,44 @@
                     android:id="@+id/imgAmount6"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/parkingtype" />
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/parking_type" />
 
                 <TextView
                     android:id="@+id/amountlabl6"
                     android:layout_width="100dip"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/imgAmount6"
+                    android:layout_centerVertical="true"
                     android:padding="5dip"
-                    android:textStyle="bold"
+                    android:text="Parking Type"
 
-                    android:text="Parking Type" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txtAmount6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/amountlabl6"
+                    android:layout_centerVertical="true"
                     android:padding="5dip"
                     android:text="Private" />
             </RelativeLayout>
-
-
 
 
             <RelativeLayout
                 android:id="@+id/rlRating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
                 android:layout_below="@+id/rlbottom2"
-                android:padding="2dip">
+                android:padding="2dip"
+                android:visibility="gone">
 
                 <ImageView
                     android:id="@+id/imgRating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
                     android:src="@drawable/order_star" />
 
                 <TextView
@@ -379,6 +417,7 @@
                     android:layout_width="100dip"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/imgRating"
+                    android:layout_centerVertical="true"
                     android:padding="5dip"
                     android:text="Ratings" />
 
@@ -405,7 +444,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rlbottom6"
                 android:layout_marginTop="10dp"
-                android:background="@color/blue_color_gradient"
+                android:textColor="#FFFFFF"
+                android:background="@color/actionbar_bg"
                 android:text="Start Work" />
 
         </RelativeLayout>

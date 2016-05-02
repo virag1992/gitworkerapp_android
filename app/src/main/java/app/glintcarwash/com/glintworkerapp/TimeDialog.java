@@ -10,19 +10,20 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TimePicker;
 
 import java.util.Calendar;
 
 public class TimeDialog extends Activity {
     Button btnCreate;
-    EditText edtEndTime,edtStartTime;
+    EditText edtEndTime, edtStartTime;
     TimePicker timePicker1;
     static final int TIME_DIALOG_ID = 999;
     static final int TIME_DIALOG_ID_2 = 999;
-    private int hour,hour2;
-    private int minute,minute2;
-
+    private int hour, hour2;
+    private int minute, minute2;
+    RelativeLayout rlClose;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,7 @@ public class TimeDialog extends Activity {
         edtEndTime = (EditText) findViewById(R.id.edtEndTime);
         edtStartTime = (EditText) findViewById(R.id.edtStartTime);
         btnCreate = (Button) findViewById(R.id.btnCreate);
-
+        rlClose = (RelativeLayout) findViewById(R.id.rlClose);
         btnCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,7 +70,12 @@ public class TimeDialog extends Activity {
                 return false;
             }
         });
-
+        rlClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
 
@@ -95,6 +101,7 @@ public class TimeDialog extends Activity {
         showDialog(TIME_DIALOG_ID);
 
     }
+
     public void addListenerOnButton2() {
         showDialog(TIME_DIALOG_ID_2);
 
@@ -145,7 +152,7 @@ public class TimeDialog extends Activity {
         if (id == TIME_DIALOG_ID) {
             return new TimePickerDialog(this, timePickerListener, hour, minute,
                     false);
-        }else if (id == TIME_DIALOG_ID_2) {
+        } else if (id == TIME_DIALOG_ID_2) {
             return new TimePickerDialog(this, timePickerListener2, hour, minute,
                     false);
         }

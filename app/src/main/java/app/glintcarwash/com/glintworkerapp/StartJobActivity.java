@@ -20,10 +20,13 @@ import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
@@ -63,8 +66,12 @@ public class StartJobActivity extends ActivityManagePermission {
     private static final long MIN_TIME_BW_UPDATES = 0;
     private static final float MIN_DISTANCE_CHANGE_FOR_UPDATES = 0;
 
-    boolean one_click=false;
+    boolean one_click = false;
     Toolbar toolbar;
+    String type;
+    TextView tvtitle;
+    Button btnBegin;
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -74,16 +81,31 @@ public class StartJobActivity extends ActivityManagePermission {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start_job_activity);
+        Bundle b = getIntent().getExtras();
+        if (b != null) {
+            type = b.getString("TYPE");
+        }
         setActionBar();
         rlOne = (RelativeLayout) findViewById(R.id.rlOne);
         rlTwo = (RelativeLayout) findViewById(R.id.rlTwo);
 
         img1 = (ImageView) findViewById(R.id.img1);
         img2 = (ImageView) findViewById(R.id.img2);
+        tvtitle = (TextView) toolbar.findViewById(R.id.tvtitle);
+        btnBegin = (Button) findViewById(R.id.btnBegin);
+        if (type.equalsIgnoreCase("")) {
+            tvtitle.setText("");
+        }
+        if (type.equalsIgnoreCase("In Progress")) {
+            tvtitle.setText("Complete Job");
+            btnBegin.setText("Request to pay");
+        } else {
+            tvtitle.setText("Begin Job");
+            btnBegin.setText("Begin Job");
 
+        }
 
-
-        askPermissions(new String[]{PermissionUtils.Manifest_CAMERA, PermissionUtils.Manifest_WRITE_EXTERNAL_STORAGE ,PermissionUtils.Manifest_READ_EXTERNAL_STORAGE})
+        askPermissions(new String[]{PermissionUtils.Manifest_CAMERA, PermissionUtils.Manifest_WRITE_EXTERNAL_STORAGE, PermissionUtils.Manifest_READ_EXTERNAL_STORAGE})
                 .setPermissionResult(new PermissionResult() {
                     @Override
                     public void permissionGranted() {
@@ -91,7 +113,7 @@ public class StartJobActivity extends ActivityManagePermission {
                         //replace with your action
                         rlOne.setClickable(false);
                         rlTwo.setClickable(false);
-                        Toast.makeText(getApplicationContext(),"Please accept permission.",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Please accept permission.", Toast.LENGTH_LONG).show();
                     }
 
                     @Override
@@ -126,8 +148,21 @@ public class StartJobActivity extends ActivityManagePermission {
 //        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+//                mDrawerLayout.openDrawer(Gravity.LEFT);
+                finish();
+                break;
+            default:
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     public void setActionBar() {
-//        RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.app_bar);
+//      RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.app_bar);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -148,9 +183,26 @@ public class StartJobActivity extends ActivityManagePermission {
     }
 
 
+    @Override
+    public void setSupportActionBar(Toolbar toolbar) {
+        super.setSupportActionBar(toolbar);
+    }
 
 
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+//        toggle.syncState();
 
+    }
+
+
+    private void initDrawer(Bundle savedInstanceState) {
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+
+    }
 
 
     public void showDialogForImage() {
@@ -313,7 +365,7 @@ public class StartJobActivity extends ActivityManagePermission {
                                              ContentResolver contentResolver) {
 
         String filePath;
-        String[] filePathColumn = { MediaStore.MediaColumns.DATA };
+        String[] filePathColumn = {MediaStore.MediaColumns.DATA};
 
         Cursor cursor = contentResolver.query(selectedVideoUri, filePathColumn,
                 null, null, null);
@@ -327,13 +379,13 @@ public class StartJobActivity extends ActivityManagePermission {
     }
 
     public void setImageView() {
-        if(one_click){
+        if (one_click) {
             if (photo != null) {
                 Drawable dr = new BitmapDrawable(photo);
                 rlOne.setBackgroundDrawable(dr);
                 img1.setVisibility(View.GONE);
             }
-        }else{
+        } else {
             if (photo != null) {
                 Drawable dr = new BitmapDrawable(photo);
                 rlTwo.setBackgroundDrawable(dr);

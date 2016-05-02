@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnKeyListener;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AbsListView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -84,7 +85,8 @@ public class ChatBubbleActivity extends BaseActivity implements OnClickListener 
                 listView.setSelection(chatArrayAdapter.getCount() - 1);
             }
         });
-
+        InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(chatText.getWindowToken(), 0);
     }
 
     @Override

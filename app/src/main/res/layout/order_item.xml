@@ -5,7 +5,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="200dip"
+        android:layout_height="250dip"
         android:background="@drawable/workavaibility_bg">
 
         <RelativeLayout
@@ -52,30 +52,44 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/rltop"
-            android:layout_marginTop="20dip"
-            android:padding="5dip">
+            android:layout_marginTop="5dip"
+            android:padding="3dip">
 
             <ImageView
                 android:id="@+id/imgDateJoin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/jpbprovider" />
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dip"
+                android:adjustViewBounds="true"
+                android:src="@drawable/job_from" />
 
             <TextView
                 android:id="@+id/datelabl1"
                 android:layout_width="100dip"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/imgDateJoin"
+                android:layout_centerVertical="true"
                 android:padding="5dip"
-                android:text="Job title." />
+                android:text="Job from." />
 
             <TextView
                 android:id="@+id/txtDatejoin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/datelabl1"
+                android:layout_centerVertical="true"
                 android:padding="5dip"
                 android:text="Mr P.Robert" />
+            <ImageView
+                android:id="@+id/imgJobFrom"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:adjustViewBounds="true"
+                android:layout_marginRight="5dip"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/profileplaceholder" />
         </RelativeLayout>
 
 
@@ -84,11 +98,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/rljob"
-            android:padding="5dip">
+            android:padding="3dip">
 
             <ImageView
                 android:id="@+id/imgDate"
-                android:layout_width="wrap_content"
+                android:layout_width="42dip"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:src="@drawable/card" />
@@ -115,11 +129,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/rlmiddel"
-            android:padding="5dip">
+            android:padding="3dip">
 
             <ImageView
                 android:id="@+id/imgLocation"
-                android:layout_width="wrap_content"
+                android:layout_width="42dip"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:src="@drawable/order_location" />
@@ -130,7 +144,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/imgLocation"
                 android:padding="5dip"
-                android:text="Date" />
+                android:text="Location" />
 
             <TextView
                 android:id="@+id/txtAddress"
@@ -139,6 +153,36 @@
                 android:layout_toRightOf="@+id/locationlabl"
                 android:padding="5dip"
                 android:text="201, Titanium City Center, Anand nagar Road , Prahlad nagar, Ahmmedabad" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlbottomb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlbottom"
+            android:padding="3dip">
+
+            <ImageView
+                android:id="@+id/imgAmount"
+                android:layout_width="42dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/order_money" />
+
+            <TextView
+                android:id="@+id/Amountlabl"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imgAmount"
+                android:padding="5dip"
+                android:text="Amount" />
+
+            <TextView
+                android:id="@+id/txtAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/Amountlabl"
+                android:padding="5dip"
+                android:text="$200.00" />
         </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>

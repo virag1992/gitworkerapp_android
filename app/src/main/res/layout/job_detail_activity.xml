@@ -49,15 +49,15 @@
                 android:id="@+id/imgPic"
                 android:layout_width="50dip"
                 android:layout_height="50dip"
-                android:layout_marginLeft="10dip"
-                android:layout_marginTop="30dip"
+                android:layout_marginLeft="40dip"
+                android:layout_marginTop="40dip"
                 android:src="@drawable/profileplaceholder" />
 
             <TextView
                 android:id="@+id/txtUserName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="35dip"
+                android:layout_marginTop="50dip"
                 android:layout_toRightOf="@+id/imgPic"
                 android:padding="10dip"
                 android:text="Hiren Patel"
@@ -66,12 +66,13 @@
         </RelativeLayout>
 
         <LinearLayout
+            android:id="@+id/llcon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/rltop"
             android:background="#EEEEEE"
-            android:padding="10dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="10dp">
 
 
             <RelativeLayout
@@ -251,32 +252,41 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
-                android:padding="3dip"
-                android:visibility="gone">
+                android:padding="3dip">
 
                 <ImageView
-                    android:id="@+id/imgCarColor"
+                    android:id="@+id/imgCarNumnerasdf"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/order_location" />
+                    android:src="@drawable/order_location"
+                    android:visibility="gone" />
 
                 <TextView
-                    android:id="@+id/carColorlabl"
+                    android:id="@+id/carCOlorlabl"
                     android:layout_width="100dip"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/imgCarColor"
+                    android:layout_toRightOf="@+id/imgCarNumnerasdf"
                     android:padding="5dip"
-                    android:text="Car Detail" />
+                    android:text="Car Color" />
 
                 <TextView
-                    android:id="@+id/txtCarColor"
+                    android:id="@+id/txtCarColor1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/carColorlabl"
+                    android:layout_toRightOf="@+id/carCOlorlabl"
                     android:padding="5dip"
-                    android:text=" : Black Car" />
+                    android:text=" : " />
+
+                <ImageView
+                    android:id="@+id/img5"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/txtCarColor1"
+                    android:background="@drawable/color_dot" />
+
             </RelativeLayout>
+
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -287,8 +297,8 @@
                     android:id="@+id/imgCarParking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"
-                    android:src="@drawable/order_location" />
+                    android:src="@drawable/order_location"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/carParkinglabl"
@@ -304,22 +314,23 @@
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/carParkinglabl"
                     android:padding="5dip"
-                    android:text=" : Black Car" />
+                    android:text=" : Private" />
             </RelativeLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dip"
-            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/llcon"
             android:layout_margin="10dip"
+            android:layout_marginTop="10dip"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnAccept"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dip"
+                android:layout_marginLeft="8dip"
                 android:layout_marginRight="10dip"
                 android:layout_weight="1"
                 android:background="#45A751"

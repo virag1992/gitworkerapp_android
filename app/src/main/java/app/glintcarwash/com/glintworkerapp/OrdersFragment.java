@@ -200,6 +200,7 @@ public class OrdersFragment extends Fragment {
                     @Override
                     public void onClick(View v) {
                         Intent color_picker = new Intent(getActivity(), OrderDetailActivity.class);
+                        color_picker.putExtra("TYPE","In Progress");
                         startActivity(color_picker);
                     }
                 });
@@ -209,24 +210,20 @@ public class OrdersFragment extends Fragment {
                     @Override
                     public void onClick(View v) {
                         Intent color_picker = new Intent(getActivity(), OrderDetailActivity.class);
+                        color_picker.putExtra("TYPE","Completed");
                         startActivity(color_picker);
                     }
                 });
             } else if (obj.OrderStatus.equalsIgnoreCase("Cancel")) {
                 viewHolder.imgStatus.setImageResource(R.drawable.cancle);
-                convertView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent color_picker = new Intent(getActivity(), OrderDetailActivity.class);
-                        startActivity(color_picker);
-                    }
-                });
+
             } else if (obj.OrderStatus.equalsIgnoreCase("Pending")) {
                 viewHolder.imgStatus.setImageResource(R.drawable.pending);
                 convertView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent color_picker = new Intent(getActivity(), PendigOrderActivity.class);
+                        Intent color_picker = new Intent(getActivity(), OrderDetailActivity.class);
+                        color_picker.putExtra("TYPE","Pending");
                         startActivity(color_picker);
                     }
                 });

@@ -46,4 +46,5 @@ dependencies {
     compile 'com.github.cooltechworks:CreditCardView:v1.0'
     compile 'com.auron:permission-manage:1.0.8'
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile 'com.daimajia.slider:library:1.1.5@aar'
 }

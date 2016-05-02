@@ -17,19 +17,17 @@
             android:padding="5dip">
 
             <TextView
-                android:layout_weight="1"
+                android:layout_width="120dip"
                 android:text="Amount"
                 android:textColor="#FFFFFF" />
 
             <TextView
-                android:layout_weight="1"
-                android:text=" : "
+                android:text="   :   "
                 android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/txtAmount"
-                android:layout_weight="1"
-                android:text="$20.00"
+                android:text="$200.00"
                 android:textColor="#FFFFFF" />
         </TableRow>
 
@@ -39,19 +37,17 @@
             android:padding="5dip">
 
             <TextView
-                android:layout_weight="1"
+                android:layout_width="120dip"
                 android:text="Date"
                 android:textColor="#FFFFFF" />
 
             <TextView
-                android:layout_weight="1"
-                android:text=" : "
+                android:text="   :   "
                 android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/txtDate"
-                android:layout_weight="1"
-                android:text="March 12, 2016"
+                android:text="May 16 ,2016"
                 android:textColor="#FFFFFF" />
         </TableRow>
         <!-- edittext span 2 column -->
@@ -61,18 +57,16 @@
             android:padding="5dip">
 
             <TextView
-                android:layout_weight="1"
+                android:layout_width="120dip"
                 android:text="Transaction Type"
                 android:textColor="#FFFFFF" />
 
             <TextView
-                android:layout_weight="1"
-                android:text=" : "
+                android:text="   :   "
                 android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/txtTransactionType"
-                android:layout_weight="1"
                 android:text="Credit"
                 android:textColor="#FFFFFF" />
         </TableRow>

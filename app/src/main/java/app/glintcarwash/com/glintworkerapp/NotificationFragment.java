@@ -101,9 +101,7 @@ public class NotificationFragment extends Fragment {
         @Override
         public View getView(int arg0, View arg1, ViewGroup arg2) {
             // TODO Auto-generated method stub
-
             Holder hv;
-
             if (arg1 == null) {
                 hv = new Holder();
                 arg1 = inflater.inflate(R.layout.notification_custom_item, null);
